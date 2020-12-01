@@ -1,0 +1,27 @@
+public static StringBuffer ReadTxt(String path) {
+            StringBuffer s=new StringBuffer();
+            // 读取文件内容（输入流）
+            try {
+                  FileInputStream out = new FileInputStream(path);
+                  InputStreamReader isr = new InputSteamReader(out);
+                  char[] chars = new char[9999999];
+                  int ch = 0;
+                  int i = 0;
+                  while ((ch = isr.read())  !=-1) {
+                         chars[i] = (char) ch;
+                  }
+                  for (int j = 0; j <  i; j++) {
+                        s . append(chars[j]);
+                      
+                  }
+                  if ((j+1) % 7 ==0 && (j+1) % 2 ==0) {
+                       s.append("。"+"n");
+                  }
+                  if ((j+1) % 7== 0 && (j+1) % 2 !=0 {
+                       s.append(",");
+                  }
+        }
+} catch (Exception e) {
+            System.out.println("1");
+}
+return  s ;
